@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pallavi & Jérôme — Telugu Wedding in Hyderabad</title>
+  <meta name="description" content="Wedding website for Pallavi & Jérôme — Telugu wedding in Hyderabad with detailed rituals, travel tips, and RSVP information." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fffdf8;
+      --ink:#2b2b2b;
+      --muted:#686868;
+      --marigold:#ffb000;
+      --pink:#e0538b;
+      --ring:#ffe5a8;
+      --card:#ffffff;
+      --shadow:0 8px 30px rgba(0,0,0,.08);
+      --radius:18px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+    h1,h2,h3{font-family:"Playfair Display",Georgia,serif;margin:0 0 .5rem;line-height:1.2}
+    h1{font-size:clamp(2rem,6vw,3.8rem)}
+    h2{font-size:clamp(1.6rem,4vw,2.4rem)}
+    h3{font-size:1.25rem}
+    a{color:var(--pink);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+    header{
+      position:relative;
+      background:
+        radial-gradient(900px 300px at 15% 0%, #fff0c2, transparent),
+        radial-gradient(900px 300px at 100% 0%, #ffd1e4, transparent),
+        linear-gradient(180deg, #fff6ea 0%, #fffdf8 60%);
+      border-bottom:6px solid var(--ring);
+      overflow:hidden;
+    }
+    nav{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #f1e5c7;padding:8px 12px;border-radius:999px;box-shadow:var(--shadow)}
+    .lang-switch{display:flex;gap:8px}
+    .lang-switch button{
+      background:#fff;border:1px solid #f0dbe5;padding:8px 12px;border-radius:999px;cursor:pointer;font-weight:700;box-shadow:var(--shadow)
+    }
+    .lang-switch button[aria-pressed="true"]{background:var(--pink);color:#fff}
+    .hero{padding:36px 0 28px;display:grid;gap:10px}
+    .sub{color:#7a6100;font-weight:700}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid #f0dbe5;border-radius:12px;background:#fff;font-weight:700;box-shadow:var(--shadow);cursor:pointer}
+    .btn.primary{background:var(--pink);border-color:#e06b9a;color:#fff}
+    .btn.sun{background:var(--marigold);border-color:#ffd36b;color:#3a2b00}
+    .countdown{font-variant-numeric:tabular-nums;font-weight:800;padding:10px 14px;border-radius:999px;background:#fff;border:1px solid #f1e5c7}
+    section{padding:36px 0}
+    .grid{display:grid;gap:18px}
+    @media(min-width:940px){.grid-2{grid-template-columns:1.15fr .85fr}}
+    .card{background:var(--card);border:1px solid #f2e7c9;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .tag{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:#9a7c00;margin-bottom:6px}
+    .event{display:grid;gap:6px;border-left:4px solid var(--marigold);padding:12px 16px;margin:8px 0;background:#fff7e6;border-radius:12px}
+    .event .time{font-weight:700}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:#fff;border:1px solid #f0d18c;border-radius:999px;padding:6px 10px}
+    .ritual{padding:14px;border:1px dashed #f0d18c;border-radius:14px;background:#fff}
+    .notice{background:#fff0f6;border:1px solid #ffd4e6;border-radius:12px;padding:10px 12px}
+    .gallery{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:12px;border:1px solid #f0e2c0}
+    .map{aspect-ratio:16/9;border:0;width:100%;border-radius:16px}
+    footer{padding:40px 0 60px;border-top:6px solid var(--ring);text-align:center;color:var(--muted)}
+    .mini-nav{display:flex;gap:12px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav aria-label="Top">
+      <div class="brand">
+        <span class="pill">💍 Pallavi & Jérôme</span>
+        <div class="mini-nav">
+          <a href="#schedule">Schedule</a>
+          <a href="#rituals">Rituals</a>
+          <a href="#dress">Dress</a>
+          <a href="#travel">Travel</a>
+          <a href="#faq">FAQs</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button id="lang-en" aria-pressed="true">English</button>
+        <button id="lang-fr" aria-pressed="false">Français</button>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <h1 data-i18n="heroTitle">Pallavi & Jérôme are getting married</h1>
+      <p class="sub" data-i18n="dateCity">22 January • Hyderabad, India</p>
+      <div class="cta">
+        <a class="btn primary" id="rsvpBtn" href="https://YOUR-RSVP-LINK" target="_blank" rel="noopener" data-i18n="rsvp">RSVP</a>
+        <button class="btn sun" id="addCalendar" data-i18n="addCal">Add to Calendar</button>
+        <span class="countdown" id="countdown">Loading…</span>
+      </div>
+      <p class="notice" data-i18n="introBlurb">
+        Welcome to Hyderabad for our Telugu wedding! Explore details about the ceremony, what to expect, and tips for your first trip to India.
+      </p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- Schedule -->
+  <section id="schedule" class="grid grid-2">
+    <div class="card">
+      <div class="tag" data-i18n="tagSchedule">Schedule</div>
+      <h2 data-i18n="scheduleTitle">Celebration Timeline</h2>
+
+      <div class="event">
+        <div><strong data-i18n="welcome">Welcome Drinks</strong> — <span class="time">Day −1 • 18:00–20:00</span></div>
+        <small data-i18n="welcomeDesc">Meet fellow guests, collect local SIM & tips packet.</small>
+        <div><em>Venue:</em> <span data-replace="welcomeVenue">Terrace Lounge, <em>Hotel TBD</em></span></div>
+      </div>
+
+      <div class="event">
+        <div><strong data-i18n="mehendi">Mehendi</strong> — <span class="time">Day 0 • 16:00–19:00</span></div>
+        <small data-i18n="mehendiDesc">Henna, chai & snacks. Dress: bright kurta/saree or smart casuals.</small>
+        <div><em>Venue:</em> <span data-replace="mehendiVenue">Family Home / Lawn, <em>TBD</em></span></div>
+      </div>
+
+      <div class="event">
+        <div><strong data-i18n="sangeet">Sangeet</strong> — <span class="time">Day 0 • 19:30–22:30</span></div>
+        <small data-i18n="sangeetDesc">Music & dance evening. Dress: festive!</small>
+        <div><em>Venue:</em> <span data-replace="sangeetVenue">Ballroom, <em>Hotel TBD</em></span></div>
+      </div>
+
+      <div class="event">
+        <div><strong data-i18n="haldi">Haldi</strong> — <span class="time">Day +1 • 07:30–08:30</span></div>
+        <small data-i18n="haldiDesc">Turmeric blessing; wear something you don’t mind getting yellow!</small>
+        <div><em>Venue:</em> <span data-replace="haldiVenue">Courtyard, <em>TBD</em></span></div>
+      </div>
+
+      <div class="event">
+        <div><strong data-i18n="muhurtham">Muhurtham (Wedding)</strong> — <span class="time">Day +1 • 09:00–12:00</span></div>
+        <small data-i18n="muhurthamDesc">Traditional Telugu ceremony with sacred rituals.</small>
+        <div><em>Venue:</em> <span data-replace="weddingVenue">Temple/Convention Hall, <em>TBD</em></span></div>
+      </div>
+
+      <div class="event">
+        <div><strong data-i18n="reception">Reception</strong> — <span class="time">Day +1 • 18:30–22:00</span></div>
+        <small data-i18n="receptionDesc">Greetings, photos & Hyderabadi dinner.</small>
+        <div><em>Venue:</em> <span data-replace="receptionVenue">Banquet, <em>TBD</em></span></div>
+      </div>
+    </div>
+
+    <!-- Quick facts -->
+    <div class="card">
+      <div class="tag" data-i18n="tagQuickFacts">Quick facts</div>
+      <h2 data-i18n="quickFactsTitle">Before You Go</h2>
+      <ul>
+        <li data-i18n="visa">Most visitors need an Indian e‑Visa—apply through the official site at least a week before your trip and travel with the same passport.</li>
+        <li data-i18n="airport">Fly into <strong>Hyderabad (HYD)</strong>. Use prepaid taxis or ride‑hailing apps; avoid random drivers.</li>
+        <li data-i18n="weather">January weather: warm days around 30 °C (86 °F) and cooler nights around 16 °C (60 °F); pack a light layer.</li>
+        <li data-i18n="money">Cards widely accepted; keep some INR cash for tips and small shops; avoid currency exchange at the airport if possible.</li>
+        <li data-i18n="health">Drink sealed bottled water and choose freshly cooked food; carry a basic medical kit.</li>
+        <li data-i18n="sim">Buy a local SIM card once in the city (passport, photo & hotel address needed); airport SIMs are pricier.</li>
+        <li data-i18n="etiquetteQuick">Pass objects with your right hand or both; remove shoes when entering temples and homes; modest dress expected.</li>
+        <li data-i18n="headNod">Small head nods (“wobbles”) are a polite sign of agreement or respect.</li>
+      </ul>
+      <div class="cta">
+        <a class="btn" href="https://maps.google.com/?q=Hyderabad" target="_blank" rel="noopener" data-i18n="openMap">Open Hyderabad Map</a>
+        <a class="btn" href="mailto:your.email@example.com" data-i18n="contactUs">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rituals -->
+  <section id="rituals">
+    <div class="card">
+      <div class="tag" data-i18n="tagRituals">Rituals</div>
+      <h2 data-i18n="ritualsTitle">Telugu Wedding — Ritual Highlights</h2>
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+        <div class="ritual">
+          <h3>Gowri & Ganapathi Puja</h3>
+          <p data-i18n="r1">The groom prays to Lord Ganesh to remove obstacles while the bride, escorted by her uncle, seeks Goddess Gauri’s blessings for marital bliss.</p>
+          <em lang="fr" data-i18n="r1fr">Le marié prie Lord Ganesh pour lever les obstacles et la mariée, accompagnée par son oncle, invoque les bénédictions de la déesse Gauri pour une union heureuse.</em>
+        </div>
+        <div class="ritual">
+          <h3>Kanyadaan & Panigrahanam</h3>
+          <p data-i18n="r2">In Kanyadaanam the bride’s parents formally place her hand in the groom’s, entrusting her happiness. During Panigrahanam the groom holds her hands and vows to be her companion through good and bad times.</p>
+          <em lang="fr" data-i18n="r2fr">Au moment du Kanyadaan, les parents de la mariée offrent officiellement sa main au marié. Pendant le Panigrahanam, le marié tient les mains de la mariée et promet de rester son compagnon dans les joies et les épreuves.</em>
+        </div>
+        <div class="ritual">
+          <h3>Jeelakarra Bellam</h3>
+          <p data-i18n="r3">The couple applies a paste of cumin and jaggery to each other’s heads. The mix of bitter cumin and sweet jaggery signifies their inseparable bond through life’s bitter and sweet moments.</p>
+          <em lang="fr" data-i18n="r3fr">Les mariés appliquent une pâte de cumin et de jaggery sur la tête de l’autre. L’alliance du cumin amer et du jaggery sucré symbolise leur union indissoluble dans les moments doux et amers de la vie.</em>
+        </div>
+        <div class="ritual">
+          <h3>Mangalsutra Dharana</h3>
+          <p data-i18n="r4">Timed to an auspicious moment, the groom ties the sacred mangalsutra around the bride’s neck. He makes three knots, pledging acceptance through thoughts, speech and actions.</p>
+          <em lang="fr" data-i18n="r4fr">À l’instant le plus propice, le marié attache le mangalsutra sacré autour du cou de la mariée. Il fait trois nœuds pour promettre son engagement par la pensée, la parole et l’action.</em>
+        </div>
+        <div class="ritual">
+          <h3>Thalambralu</h3>
+          <p data-i18n="r5">The couple playfully showers each other with rice mixed with turmeric and saffron, wishing happiness, success and prosperity. Rice symbolizes the bride’s transition and their hopes for abundant joy.</p>
+          <em lang="fr" data-i18n="r5fr">Les mariés se versent mutuellement du riz mélangé au curcuma et au safran, souhaitant bonheur, réussite et prospérité. Le riz symbolise la transition de la mariée et leur désir d’une joie abondante.</em>
+        </div>
+        <div class="ritual">
+          <h3>Sapthapadi & Nagavelli</h3>
+          <p data-i18n="r6">After their garments are knotted together, the couple takes seven sacred steps, each vow promising to share responsibilities, gain strength, prosper together, pursue joy and spirituality, raise virtuous children, remain lifelong partners, and cherish each other in all circumstances.</p>
+          <em lang="fr" data-i18n="r6fr">Après avoir noué leurs vêtements, les mariés accomplissent sept pas sacrés. Chaque pas représente un vœu : partager les responsabilités, s’entraider, prospérer ensemble, cultiver la joie et la spiritualité, élever des enfants vertueux, rester partenaires pour la vie et se chérir dans toutes les situations.</em>
+        </div>
+        <div class="ritual">
+          <h3>Ring Game</h3>
+          <p data-i18n="r7">Two rings (one gold, one silver) are dropped into a pot of water. The couple races to find the gold ring; whoever wins twice playfully gets “the upper hand” in the marriage.</p>
+          <em lang="fr" data-i18n="r7fr">Deux anneaux (un en or, un en argent) sont plongés dans un pot d’eau. Les mariés cherchent l’anneau d’or ; celui qui le trouve deux fois obtient symboliquement « l’avantage » dans le couple.</em>
+        </div>
+        <div class="ritual">
+          <h3>Mangala Harathi & Aashirvachanam</h3>
+          <p data-i18n="r8">A lime–turmeric mixture is circled around the couple and thrown away to ward off evil. At the end, married women perform Mangala Harathi, and elders bless the couple with flowers and yellow rice in Aashirvachanam.</p>
+          <em lang="fr" data-i18n="r8fr">Un mélange de citron vert et de curcuma est tourné autour des mariés et jeté pour repousser le mal. À la fin, des femmes mariées exécutent le Mangala Harathi, puis les aînés bénissent le couple avec des fleurs et du riz jaune lors de l’Aashirvachanam.</em>
+        </div>
+        <div class="ritual">
+          <h3>Arundhati Nakshatram</h3>
+          <p data-i18n="r9">The couple is shown the Arundhati and Dhruva stars, reminding them of the eternal love between the sage Vasishta and his wife Arundhati and inspiring them to strive for a stable, loving relationship.</p>
+          <em lang="fr" data-i18n="r9fr">On montre aux mariés les étoiles Arundhati et Dhruva, rappel de l’amour éternel entre le sage Vasishta et son épouse Arundhati, et source d’inspiration pour un couple stable et aimant.</em>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dress -->
+  <section id="dress">
+    <div class="card">
+      <div class="tag" data-i18n="tagDress">Dress code</div>
+      <h2 data-i18n="dressTitle">What to Wear</h2>
+      <div class="chips">
+        <div class="chip" data-i18n="dress1">Bright colours welcome—marigold, pink, jewel tones</div>
+        <div class="chip" data-i18n="dress2">Women: saree/lehenga or elegant dress with shawl</div>
+        <div class="chip" data-i18n="dress3">Men: kurta set or suit; closed shoes</div>
+        <div class="chip" data-i18n="dress4">Bring a light scarf/shawl for temples and ceremonies</div>
+        <div class="chip" data-i18n="dress5">Haldi gets messy—wear casuals that can stain</div>
+      </div>
+      <div class="gallery" aria-label="Style inspiration">
+        <img src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e4?q=80&w=800&auto=format&fit=crop" alt="Marigold saree inspiration">
+        <img src="https://images.unsplash.com/photo-1576153192621-7a3be10b74c5?q=80&w=800&auto=format&fit=crop" alt="Pink lehenga inspiration">
+        <img src="https://images.unsplash.com/photo-1520975922284-9c1c0e02bbc5?q=80&w=800&auto=format&fit=crop" alt="Kurta inspiration">
+        <img src="https://images.unsplash.com/photo-1520974735194-8d95f9c2c1e3?q=80&w=800&auto=format&fit=crop" alt="Elegant suit inspiration">
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel -->
+  <section id="travel" class="grid grid-2">
+    <div class="card">
+      <div class="tag" data-i18n="tagTravel">Travel</div>
+      <h2 data-i18n="travelTitle">Getting There & Around</h2>
+      <p data-i18n="fly">Fly into <strong>Rajiv Gandhi International Airport (HYD)</strong>. Use official prepaid taxis or ride-hailing apps; avoid unregistered drivers.</p>
+      <p data-i18n="hotel">We’ve reserved rooms at our guest hotel:</p>
+      <ul>
+        <li><strong data-replace="hotelName">Hotel Marigold & Pink</strong> — <span data-replace="hotelAddress">Banjara Hills, Hyderabad</span></li>
+        <li data-i18n="hotelRate">Ask for “Pallavi & Jérôme Wedding Rate”.</li>
+        <li data-i18n="transfer">Shared shuttles to events will depart from the lobby (see timings in your welcome packet).</li>
+      </ul>
+      <div class="cta">
+        <a class="btn" href="https://maps.google.com/?q=Banjara+Hills+Hyderabad" target="_blank" rel="noopener" data-i18n="openMapHotel">Open Hotel Map</a>
+        <a class="btn" href="tel:+910000000000" data-i18n="callHotel">Call Hotel</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="tag" data-i18n="tagTips">Tips</div>
+      <h2 data-i18n="tipsTitle">First-Time India Tips</h2>
+      <ul>
+        <li data-i18n="ride">Use ride‑hailing apps or hotel cars; keep small cash for tips; avoid unmetered taxis.</li>
+        <li data-i18n="food">Street food is delicious—choose busy stalls where food is cooked in front of you; avoid raw salads or pre-cut fruit.</li>
+        <li data-i18n="temple">Temples and homes: remove shoes; cover shoulders and knees; some sites require head coverings.</li>
+        <li data-i18n="gifts">Gifts: your presence is enough! If you wish, a small envelope is traditional.</li>
+        <li data-i18n="etiquette">Use your right hand to give/receive; a gentle head nod is common. Avoid public displays of affection.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Venues Map -->
+  <section id="map">
+    <div class="card">
+      <div class="tag" data-i18n="tagVenues">Venues</div>
+      <h2 data-i18n="mapTitle">How to Find Us</h2>
+      <p data-i18n="mapBlurb">Tap a pin to open in your Maps app. Exact locations will be emailed with your RSVP confirmation.</p>
+      <iframe class="map" title="Venue Map"
+        src="https://www.google.com/maps?q=Hyderabad&output=embed" loading="lazy"></iframe>
+      <ul>
+        <li>Mehendi: <span data-replace="mehendiAddress">TBD</span></li>
+        <li>Sangeet: <span data-replace="sangeetAddress">TBD</span></li>
+        <li>Wedding: <span data-replace="weddingAddress">TBD</span></li>
+        <li>Reception: <span data-replace="receptionAddress">TBD</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="card">
+      <div class="tag" data-i18n="tagFAQ">FAQ</div>
+      <h2 data-i18n="faqTitle">FAQs</h2>
+      <dl>
+        <dt data-i18n="q1">Can I wear black or white?</dt>
+        <dd data-i18n="a1">Yes, but bright colours are encouraged. Avoid fully white during the ceremony.</dd>
+
+        <dt data-i18n="q2">Is there a gift registry?</dt>
+        <dd data-i18n="a2">Your presence is our gift. If you wish, contribute to our travel fund at the reception.</dd>
+
+        <dt data-i18n="q3">Are children welcome?</dt>
+        <dd data-i18n="a3">Absolutely — family celebrations are for everyone!</dd>
+
+        <dt data-i18n="q4">Can I take photos?</dt>
+        <dd data-i18n="a4">Yes, respectfully. We’ll share an online album afterward.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="card">
+      <div class="tag" data-i18n="tagContact">Contact</div>
+      <h2 data-i18n="contactTitle">Questions? We’re here to help.</h2>
+      <p><strong>Pallavi & Jérôme</strong></p>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a> • WhatsApp: <a href="https://wa.me/000000000000" target="_blank" rel="noopener">+91 00000 00000</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>With love, Pallavi & Jérôme • <span data-i18n="footer">See you soon in Hyderabad!</span></p>
+  </div>
+</footer>
+
+<script>
+/* ======= Editable details ======= */
+const WEDDING_ISO_LOCAL = '2026-01-22T09:00';
+const RECEPTION_ISO_LOCAL = '2026-01-22T18:30';
+const CITY_TEXT = 'Hyderabad, India';
+/* ================================== */
+
+// Update hero date and city
+function updateDateCity(){
+  const el = document.querySelector('[data-i18n="dateCity"]');
+  const dateObj = new Date(WEDDING_ISO_LOCAL);
+  const options = {day:'2-digit',month:'long'};
+  el.innerHTML = `${dateObj.toLocaleDateString(undefined,options)} • ${CITY_TEXT}`;
+}
+updateDateCity();
+
+/* Countdown */
+function updateCountdown(){
+  const target = new Date(WEDDING_ISO_LOCAL);
+  const now = new Date();
+  const diff = target - now;
+  const el = document.getElementById('countdown');
+  if(diff <= 0){ el.textContent = 'It’s wedding time!'; return; }
+  const d = Math.floor(diff/86400000);
+  const h = Math.floor((diff%86400000)/3600000);
+  const m = Math.floor((diff%3600000)/60000);
+  el.textContent = `${d}d ${h}h ${m}m`;
+}
+updateCountdown();
+setInterval(updateCountdown, 60000);
+
+/* Add to Calendar (ICS download) */
+function buildICS(summary,startISO,endISO,location,description){
+  function toICS(dt){
+    const d = new Date(dt);
+    const y = d.getUTCFullYear();
+    const mo = String(d.getUTCMonth()+1).padStart(2,'0');
+    const da = String(d.getUTCDate()).padStart(2,'0');
+    const h = String(d.getUTCHours()).padStart(2,'0');
+    const mi = String(d.getUTCMinutes()).padStart(2,'0');
+    const s = String(d.getUTCSeconds()).padStart(2,'0');
+    return `${y}${mo}${da}T${h}${mi}${s}Z`;
+  }
+  const uid = Math.random().toString(36).slice(2)+ '@pallavi-jerome.wedding';
+  return [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//PallaviJerome//Wedding//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH','BEGIN:VEVENT',`UID:${uid}`,`DTSTAMP:${toICS(new Date())}`,`DTSTART:${toICS(startISO)}`,`DTEND:${toICS(endISO)}`,`SUMMARY:${summary}`,`LOCATION:${location}`,`DESCRIPTION:${description}`,'END:VEVENT','END:VCALENDAR'
+  ].join('\r\n');
+}
+document.getElementById('addCalendar').addEventListener('click',()=>{
+  const start = new Date(WEDDING_ISO_LOCAL);
+  const end = new Date(start.getTime()+3*3600000);
+  const ics = buildICS('Muhurtham — Pallavi & Jérôme', start, end, 'Hyderabad, India', 'Traditional Telugu wedding.');
+  const a = document.createElement('a');
+  const blob = new Blob([ics],{type:'text/calendar;charset=utf-8'});
+  a.href = URL.createObjectURL(blob);
+  a.download = 'Pallavi-Jerome-Wedding.ics';
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+
+/* Bilingual i18n (English/French) */
+const dict = {
+  en:{
+    heroTitle:"Pallavi & Jérôme are getting married",
+    rsvp:"RSVP", addCal:"Add to Calendar",
+    introBlurb:"Welcome to Hyderabad for our Telugu wedding! Explore details about the ceremony, what to expect, and tips for your first trip to India.",
+    tagSchedule:"Schedule", scheduleTitle:"Celebration Timeline",
+    welcome:"Welcome Drinks", welcomeDesc:"Meet fellow guests, collect local SIM & tips packet.",
+    mehendi:"Mehendi", mehendiDesc:"Henna, chai & snacks. Dress: bright kurta/saree or smart casuals.",
+    sangeet:"Sangeet", sangeetDesc:"Music & dance evening. Dress: festive!",
+    haldi:"Haldi", haldiDesc:"Turmeric blessing; wear something you don’t mind getting yellow!",
+    muhurtham:"Muhurtham (Wedding)", muhurthamDesc:"Traditional Telugu ceremony with sacred rituals.",
+    reception:"Reception", receptionDesc:"Greetings, photos & Hyderabadi dinner.",
+    tagQuickFacts:"Quick facts", quickFactsTitle:"Before You Go",
+    visa:"Most visitors need an Indian e‑Visa—apply through the official site at least a week before your trip and travel with the same passport.",
+    airport:"Fly into Hyderabad (HYD). Use prepaid taxis or ride‑hailing apps; avoid random drivers.",
+    weather:"January weather: warm days around 30 °C (86 °F) and cooler nights around 16 °C (60 °F); pack a light layer.",
+    money:"Cards widely accepted; keep some INR cash for tips and small shops; avoid currency exchange at the airport if possible.",
+    health:"Drink sealed bottled water and choose freshly cooked food; carry a basic medical kit.",
+    sim:"Buy a local SIM card once in the city (passport, photo & hotel address needed); airport SIMs are pricier.",
+    etiquetteQuick:"Pass objects with your right hand or both; remove shoes when entering temples and homes; modest dress expected.",
+    headNod:"Small head nods (“wobbles”) are a polite sign of agreement or respect.",
+    openMap:"Open Hyderabad Map", contactUs:"Contact Us",
+    tagRituals:"Rituals", ritualsTitle:"Telugu Wedding — Ritual Highlights",
+    r1:"The groom prays to Lord Ganesh to remove obstacles while the bride, escorted by her uncle, seeks Goddess Gauri’s blessings for marital bliss.",
+    r1fr:"Le marié prie Lord Ganesh pour lever les obstacles et la mariée, accompagnée par son oncle, invoque les bénédictions de la déesse Gauri pour une union heureuse.",
+    r2:"In Kanyadaanam the bride’s parents formally place her hand in the groom’s, entrusting her happiness. During Panigrahanam the groom holds her hands and vows to be her companion through good and bad times.",
+    r2fr:"Au moment du Kanyadaan, les parents de la mariée offrent officiellement sa main au marié. Pendant le Panigrahanam, le marié tient les mains de la mariée et promet de rester son compagnon dans les joies et les épreuves.",
+    r3:"The couple applies a paste of cumin and jaggery to each other’s heads. The mix of bitter cumin and sweet jaggery signifies their inseparable bond through life’s bitter and sweet moments.",
+    r3fr:"Les mariés appliquent une pâte de cumin et de jaggery sur la tête de l’autre. L’alliance du cumin amer et du jaggery sucré symbolise leur union indissoluble dans les moments doux et amers de la vie.",
+    r4:"Timed to an auspicious moment, the groom ties the sacred mangalsutra around the bride’s neck. He makes three knots, pledging acceptance through thoughts, speech and actions.",
+    r4fr:"À l’instant le plus propice, le marié attache le mangalsutra sacré autour du cou de la mariée. Il fait trois nœuds pour promettre son engagement par la pensée, la parole et l’action.",
+    r5:"The couple playfully showers each other with rice mixed with turmeric and saffron, wishing happiness, success and prosperity. Rice symbolizes the bride’s transition and their hopes for abundant joy.",
+    r5fr:"Les mariés se versent mutuellement du riz mélangé au curcuma et au safran, souhaitant bonheur, réussite et prospérité. Le riz symbolise la transition de la mariée et leur désir d’une joie abondante.",
+    r6:"After their garments are knotted together, the couple takes seven sacred steps, each vow promising to share responsibilities, gain strength, prosper together, pursue joy and spirituality, raise virtuous children, remain lifelong partners, and cherish each other in all circumstances.",
+    r6fr:"Après avoir noué leurs vêtements, les mariés accomplissent sept pas sacrés. Chaque pas représente un vœu : partager les responsabilités, s’entraider, prospérer ensemble, cultiver la joie et la spiritualité, élever des enfants vertueux, rester partenaires pour la vie et se chérir dans toutes les situations.",
+    r7:"Two rings (one gold, one silver) are dropped into a pot of water. The couple races to find the gold ring; whoever wins twice playfully gets “the upper hand” in the marriage.",
+    r7fr:"Deux anneaux (un en or, un en argent) sont plongés dans un pot d’eau. Les mariés cherchent l’anneau d’or ; celui qui le trouve deux fois obtient symboliquement « l’avantage » dans le couple.",
+    r8:"A lime–turmeric mixture is circled around the couple and thrown away to ward off evil. At the end, married women perform Mangala Harathi, and elders bless the couple with flowers and yellow rice in Aashirvachanam.",
+    r8fr:"Un mélange de citron vert et de curcuma est tourné autour des mariés et jeté pour repousser le mal. À la fin, des femmes mariées exécutent le Mangala Harathi, puis les aînés bénissent le couple avec des fleurs et du riz jaune lors de l’Aashirvachanam.",
+    r9:"The couple is shown the Arundhati and Dhruva stars, reminding them of the eternal love between the sage Vasishta and his wife Arundhati and inspiring them to strive for a stable, loving relationship.",
+    r9fr:"On montre aux mariés les étoiles Arundhati et Dhruva, rappel de l’amour éternel entre le sage Vasishta et son épouse Arundhati, et source d’inspiration pour un couple stable et aimant.",
+    tagDress:"Dress code", dressTitle:"What to Wear",
+    dress1:"Bright colours welcome—marigold, pink, jewel tones",
+    dress2:"Women: saree/lehenga or elegant dress with shawl",
+    dress3:"Men: kurta set or suit; closed shoes",
+    dress4:"Bring a light scarf/shawl for temples and ceremonies",
+    dress5:"Haldi gets messy—wear casuals that can stain",
+    tagTravel:"Travel", travelTitle:"Getting There & Around",
+    hotelRate:"Ask for “Pallavi & Jérôme Wedding Rate”.",
+    transfer:"Shared shuttles to events will depart from the lobby (see timings in your welcome packet).",
+    openMapHotel:"Open Hotel Map", callHotel:"Call Hotel",
+    tagTips:"Tips", tipsTitle:"First-Time India Tips",
+    ride:"Use ride‑hailing apps or hotel cars; keep small cash for tips; avoid unmetered taxis.",
+    food:"Street food is delicious—choose busy stalls where food is cooked in front of you; avoid raw salads or pre-cut fruit.",
+    temple:"Temples and homes: remove shoes; cover shoulders and knees; some sites require head coverings.",
+    gifts:"Gifts: your presence is enough! If you wish, a small envelope is traditional.",
+    etiquette:"Use your right hand to give/receive; a gentle head nod is common. Avoid public displays of affection.",
+    tagVenues:"Venues", mapTitle:"How to Find Us", mapBlurb:"Tap a pin to open in your Maps app. Exact locations will be emailed with your RSVP confirmation.",
+    tagFAQ:"FAQ", faqTitle:"FAQs",
+    q1:"Can I wear black or white?", a1:"Yes, but bright colours are encouraged. Avoid fully white during the ceremony.",
+    q2:"Is there a gift registry?", a2:"Your presence is our gift. If you wish, contribute to our travel fund at the reception.",
+    q3:"Are children welcome?", a3:"Absolutely — family celebrations are for everyone!",
+    q4:"Can I take photos?", a4:"Yes, respectfully. We’ll share an online album afterward.",
+    tagContact:"Contact", contactTitle:"Questions? We’re here to help.",
+    footer:"See you soon in Hyderabad!"
+  },
+  fr:{
+    heroTitle:"Pallavi & Jérôme se marient",
+    rsvp:"RSVP", addCal:"Ajouter au calendrier",
+    introBlurb:"Bienvenue à Hyderabad pour notre mariage télougou ! Découvrez le déroulement de la cérémonie, ce qu’il faut prévoir et des conseils pour votre premier voyage en Inde.",
+    tagSchedule:"Programme", scheduleTitle:"Calendrier des festivités",
+    welcome:"Cocktail de bienvenue", welcomeDesc:"Rencontrez les autres invités, récupérez votre carte SIM locale et un kit d’informations.",
+    mehendi:"Mehendi", mehendiDesc:"Henné, thé et en‑cas. Tenue : kurta/sari coloré ou chic décontracté.",
+    sangeet:"Sangeet", sangeetDesc:"Soirée musique & danse. Tenue festive !",
+    haldi:"Haldi", haldiDesc:"Bénédiction au curcuma ; portez une tenue qui peut être tachée en jaune !",
+    muhurtham:"Muhurtham (Cérémonie)", muhurthamDesc:"Cérémonie télougoue traditionnelle avec rituels sacrés.",
+    reception:"Réception", receptionDesc:"Salutations, photos et dîner hyderabadi.",
+    tagQuickFacts:"Infos utiles", quickFactsTitle:"Avant de partir",
+    visa:"La plupart des visiteurs ont besoin d’un e‑Visa indien ; faites la demande sur le site officiel au moins une semaine avant le voyage et utilisez le même passeport.",
+    airport:"Arrivez à Hyderabad (HYD). Utilisez les taxis prépayés ou les applications de VTC ; évitez les chauffeurs non enregistrés.",
+    weather:"Météo de janvier : journées chaudes autour de 30 °C et nuits plus fraîches autour de 16 °C ; prévoyez une petite veste.",
+    money:"Les cartes sont largement acceptées ; gardez des roupies pour les pourboires et les petites boutiques ; évitez de changer votre argent à l’aéroport si possible.",
+    health:"Buvez de l’eau en bouteille scellée et privilégiez les plats fraîchement cuisinés ; emportez une trousse médicale de base.",
+    sim:"Achetez une carte SIM locale en ville (passeport, photo et adresse d’hôtel requis) ; les cartes SIM de l’aéroport sont plus chères.",
+    etiquetteQuick:"Passez les objets avec la main droite ou les deux mains ; retirez vos chaussures dans les temples et les maisons ; une tenue modeste est attendue.",
+    headNod:"De petits hochements de tête sont un signe poli d’accord ou de respect.",
+    openMap:"Ouvrir la carte d’Hyderabad", contactUs:"Nous contacter",
+    tagRituals:"Rituels", ritualsTitle:"Mariage télougou – Moments forts",
+    r1:"Le marié prie Lord Ganesh pour lever les obstacles et la mariée, accompagnée par son oncle, invoque les bénédictions de la déesse Gauri pour une union heureuse.",
+    r1fr:"Le marié prie Lord Ganesh pour lever les obstacles et la mariée, accompagnée par son oncle, invoque les bénédictions de la déesse Gauri pour une union heureuse.",
+    r2:"Au moment du Kanyadaan, les parents de la mariée offrent officiellement sa main au marié. Pendant le Panigrahanam, le marié tient les mains de la mariée et promet de rester son compagnon dans les joies et les épreuves.",
+    r2fr:"Au moment du Kanyadaan, les parents de la mariée offrent officiellement sa main au marié. Pendant le Panigrahanam, le marié tient les mains de la mariée et promet de rester son compagnon dans les joies et les épreuves.",
+    r3:"Les mariés appliquent une pâte de cumin et de jaggery sur la tête de l’autre. L’alliance du cumin amer et du jaggery sucré symbolise leur union indissoluble dans les moments doux et amers de la vie.",
+    r3fr:"Les mariés appliquent une pâte de cumin et de jaggery sur la tête de l’autre. L’alliance du cumin amer et du jaggery sucré symbolise leur union indissoluble dans les moments doux et amers de la vie.",
+    r4:"À l’instant le plus propice, le marié attache le mangalsutra sacré autour du cou de la mariée. Il fait trois nœuds pour promettre son engagement par la pensée, la parole et l’action.",
+    r4fr:"À l’instant le plus propice, le marié attache le mangalsutra sacré autour du cou de la mariée. Il fait trois nœuds pour promettre son engagement par la pensée, la parole et l’action.",
+    r5:"Les mariés se versent mutuellement du riz mélangé au curcuma et au safran, souhaitant bonheur, réussite et prospérité. Le riz symbolise la transition de la mariée et leur désir d’une joie abondante.",
+    r5fr:"Les mariés se versent mutuellement du riz mélangé au curcuma et au safran, souhaitant bonheur, réussite et prospérité. Le riz symbolise la transition de la mariée et leur désir d’une joie abondante.",
+    r6:"Après avoir noué leurs vêtements, les mariés accomplissent sept pas sacrés. Chaque pas représente un vœu : partager les responsabilités, s’entraider, prospérer ensemble, cultiver la joie et la spiritualité, élever des enfants vertueux, rester partenaires pour la vie et se chérir dans toutes les situations.",
+    r6fr:"Après avoir noué leurs vêtements, les mariés accomplissent sept pas sacrés. Chaque pas représente un vœu : partager les responsabilités, s’entraider, prospérer ensemble, cultiver la joie et la spiritualité, élever des enfants vertueux, rester partenaires pour la vie et se chérir dans toutes les situations.",
+    r7:"Deux anneaux (un en or, un en argent) sont plongés dans un pot d’eau. Les mariés cherchent l’anneau d’or ; celui qui le trouve deux fois obtient symboliquement « l’avantage » dans le couple.",
+    r7fr:"Deux anneaux (un en or, un en argent) sont plongés dans un pot d’eau. Les mariés cherchent l’anneau d’or ; celui qui le trouve deux fois obtient symboliquement « l’avantage » dans le couple.",
+    r8:"Un mélange de citron vert et de curcuma est tourné autour des mariés et jeté pour repousser le mal. À la fin, des femmes mariées exécutent le Mangala Harathi, puis les aînés bénissent le couple avec des fleurs et du riz jaune lors de l’Aashirvachanam.",
+    r8fr:"Un mélange de citron vert et de curcuma est tourné autour des mariés et jeté pour repousser le mal. À la fin, des femmes mariées exécutent le Mangala Harathi, puis les aînés bénissent le couple avec des fleurs et du riz jaune lors de l’Aashirvachanam.",
+    r9:"On montre aux mariés les étoiles Arundhati et Dhruva, rappel de l’amour éternel entre le sage Vasishta et son épouse Arundhati, et source d’inspiration pour un couple stable et aimant.",
+    r9fr:"On montre aux mariés les étoiles Arundhati et Dhruva, rappel de l’amour éternel entre le sage Vasishta et son épouse Arundhati, et source d’inspiration pour un couple stable et aimant.",
+    tagDress:"Code vestimentaire", dressTitle:"Que porter",
+    dress1:"Couleurs vives bienvenues : souci, rose, tons bijoux",
+    dress2:"Femmes : sari/lehenga ou robe élégante avec châle",
+    dress3:"Hommes : kurta ou costume ; chaussures fermées",
+    dress4:"Prévoyez une écharpe ou un châle pour les temples et les cérémonies",
+    dress5:"Le haldi tache — privilégiez une tenue simple",
+    tagTravel:"Voyage", travelTitle:"Arriver & se déplacer",
+    hotelRate:"Demandez le “Tarif mariage Pallavi & Jérôme”.",
+    transfer:"Des navettes communes partiront du hall (horaires dans votre kit de bienvenue).",
+    openMapHotel:"Ouvrir la carte de l’hôtel", callHotel:"Appeler l’hôtel",
+    tagTips:"Astuces", tipsTitle:"Première fois en Inde",
+    ride:"Utilisez les applications de VTC ou les voitures d’hôtel ; gardez de la petite monnaie pour les pourboires ; évitez les taxis sans compteur.",
+    food:"La street‑food est délicieuse — choisissez des stands animés où l’on cuisine devant vous ; évitez les salades crues ou les fruits pré‑découpés.",
+    temple:"Temples et maisons : retirez vos chaussures ; couvrez épaules et genoux ; certains lieux exigent de se couvrir la tête.",
+    gifts:"Cadeaux : votre présence suffit ! Si vous le souhaitez, une petite enveloppe est traditionnelle.",
+    etiquette:"Utilisez votre main droite pour donner/recevoir ; un léger hochement de tête est courant. Évitez les gestes d’affection en public.",
+    tagVenues:"Lieux", mapTitle:"Nous trouver", mapBlurb:"Touchez une épingle pour ouvrir votre application de cartes. Les adresses exactes seront envoyées après votre RSVP.",
+    tagFAQ:"FAQ", faqTitle:"Questions fréquentes",
+    q1:"Puis‑je porter du noir ou du blanc ?", a1:"Oui, mais les couleurs vives sont encouragées. Évitez le blanc intégral lors de la cérémonie.",
+    q2:"Existe‑t‑il une liste de cadeaux ?", a2:"Votre présence est notre cadeau. Si vous le souhaitez, vous pouvez contribuer à notre fonds de voyage lors de la réception.",
+    q3:"Les enfants sont‑ils les bienvenus ?", a3:"Absolument — la fête est pour toute la famille !",
+    q4:"Puis‑je prendre des photos ?", a4:"Oui, avec respect. Nous partagerons un album en ligne par la suite.",
+    tagContact:"Contact", contactTitle:"Des questions ? Nous sommes là.",
+    footer:"À très vite à Hyderabad !"
+  }
+};
+
+function setLang(lang){
+  const enBtn = document.getElementById('lang-en');
+  const frBtn = document.getElementById('lang-fr');
+  const map = dict[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const k = el.getAttribute('data-i18n');
+    if(map[k]) el.innerHTML = map[k];
+  });
+  enBtn.setAttribute('aria-pressed', lang==='en');
+  frBtn.setAttribute('aria-pressed', lang==='fr');
+}
+document.getElementById('lang-en').addEventListener('click',()=>setLang('en'));
+document.getElementById('lang-fr').addEventListener('click',()=>setLang('fr'));
+
+/* Schema.org structured data */
+(function addSchema(){
+  const data = {
+    "@context":"https://schema.org",
+    "@type":"WeddingEvent",
+    "name":"Pallavi & Jérôme — Telugu Wedding",
+    "startDate": new Date(WEDDING_ISO_LOCAL).toISOString(),
+    "location":{"@type":"Place","name":"Hyderabad","address":"Hyderabad, Telangana, India"},
+    "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus":"https://schema.org/EventScheduled"
+  };
+  const s = document.createElement('script');
+  s.type='application/ld+json';
+  s.textContent = JSON.stringify(data);
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
